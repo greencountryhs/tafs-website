@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tulsa Area Forest School | Nature-Based Education</title>
+    <meta name="description"
+        content="Tulsa Area Forest School provides nature-based education, hikes, foraging, and camping for children in Tulsa, OK.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.jpg" alt="Tulsa Area Forest School Logo" width="100">
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+
+                    <li><a href="sessions.html" class="nav-link">Sessions</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="team.html" class="nav-link">Team</a></li>
+                    <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+                    <li><a href="donations.html" class="btn btn-secondary">Donate</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero text-center" style="
+            padding: 8rem 1rem; 
+            background: linear-gradient(rgba(44, 85, 48, 0.8), rgba(44, 85, 48, 0.6)), url('assets/images/kids-on-a-log.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;">
+            <div class="container">
+                <h1 style="color: white; margin-bottom: 1rem; font-size: 3rem; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
+                    Nature-Based experiences, serving Tulsa and beyond</h1>
+                <p style="font-size: 1.5rem; margin-bottom: 2rem; text-shadow: 0 1px 2px rgba(0,0,0,0.3);">Hikes,
+                    foraging, camping, and wildcrafting for children.</p>
+                <div class="hero-btns">
+                    <a href="sessions.html" class="btn btn-secondary">View Sessions</a>
+                    <a href="contact.html" class="btn"
+                        style="background: white; color: var(--clr-primary); margin-left: 10px;">Get Involved</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flyer / Announcement Placeholder -->
+        <section class="announcement section">
+            <div class="container text-center">
+                <h2>Upcoming Events</h2>
+                <div class="flyer-placeholder"
+                    style="background: #e0e0e0; padding: 3rem; margin-top: 1rem; border-radius: var(--radius-md);">
+                    <p>We're on our winter break through the end of February. Keep an eye out for special events and
+                        classes starting back soon.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Teaser -->
+        <section class="mission-teaser section" style="background-color: var(--clr-bg);">
+            <div class="container text-center">
+                <h2>Our Mission</h2>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <img src="assets/images/camping-kids.jpg" alt="Children camping in the forest"
+                        style="width: 100%; max-height: 400px; object-fit: cover; border-radius: var(--radius-md); margin-bottom: 2rem;">
+                    <p>Tulsa Area Forest School (TAFS) is a community-driven
+                        nature education program offering free, inclusive outdoor learning experiences for families
+                        across
+                        the Tulsa area. We gather 2–3 times each week in local parks and natural spaces, providing
+                        enriching, hands-on sessions tailored for all ages and abilities.
+
+                        At TAFS, we believe nature is for everyone. Our programs are open to all families—regardless of
+                        age,
+                        race, gender, ability, or background. Whether you're a local resident or visiting Tulsa, you are
+                        welcome here. Join us in fostering connection, curiosity, and community through nature. To learn
+                        more, follow our Facebook and Instagram pages. </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Photo Gallery -->
+    <section class="section gallery" style="background-color: white;">
+        <div class="container text-center">
+            <h2>Moments from the Forest</h2>
+            <p>Snapshots of curiosity, connection, and joy.</p>
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 2rem;">
+                <!-- Gallery Item 1 -->
+                <div style="height: 250px; border-radius: var(--radius-md); overflow: hidden;">
+                    <img src="assets/images/kids-in-big-tree.jpg" alt="Tree Climbing"
+                        style="width: 100%; height: 100%; object-fit: contain; transition: transform 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                </div>
+                <!-- Gallery Item 2 -->
+                <div style="height: 250px; border-radius: var(--radius-md); overflow: hidden;">
+                    <img src="assets/images/cookin-with-kids.jpg" alt="Cooking with Kids"
+                        style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                </div>
+                <!-- Gallery Item 3 -->
+                <div style="height: 250px; border-radius: var(--radius-md); overflow: hidden;">
+                    <img src="assets/images/making-fire.jpg" alt="Building Fire"
+                        style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                </div>
+                <!-- Gallery Item 4 -->
+                <div style="height: 250px; border-radius: var(--radius-md); overflow: hidden;">
+                    <img src="assets/images/mud-and-mushroom-girl.jpg" alt="Nature Discoveries"
+                        style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                </div>
+                <!-- Gallery Item 5 -->
+                <div style="height: 250px; border-radius: var(--radius-md); overflow: hidden;">
+                    <img src="assets/images/kids-looking-in-water.jpg" alt="Water Exploration"
+                        style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                </div>
+                <!-- Gallery Item 6 -->
+                <div style="height: 250px; border-radius: var(--radius-md); overflow: hidden;">
+                    <img src="assets/images/tea-party1.jpg" alt="Forest Tea Party"
+                        style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer"
+        style="background: var(--clr-primary); color: white; padding: 2rem 0; margin-top: auto;">
+        <div class="container text-center">
+            <p>&copy; 2026 Tulsa Area Forest School. A 501(c)(3) Organization.</p>
+            <div class="social-links" style="margin-top: 1rem;">
+                <a href="#" class="social-icon" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 0 0 1 1-1h3z" />
+                    </svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                    </svg>
+                </a>
+                <a href="mailto:info@tulsaforestschool.org" class="social-icon" aria-label="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sessions | Tulsa Area Forest School</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .class-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .class-card {
+            background: white;
+            padding: 1.5rem;
+            padding-bottom: 1rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid #eed;
+            transition: transform 0.2s;
+        }
+
+        .class-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .class-card h3 {
+            color: var(--clr-primary);
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.jpg" alt="Tulsa Area Forest School Logo" width="100">
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+
+                    <li><a href="sessions.html" class="nav-link active">Sessions</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="team.html" class="nav-link">Team</a></li>
+                    <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+                    <li><a href="donations.html" class="btn btn-secondary">Donate</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section sessions-hero text-center">
+            <div class="container">
+                <h1>Our Sessions</h1>
+                <p>Explore our wide range of nature-based programs for all ages.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="class-grid">
+                    <!-- Sprouts & Scouts -->
+                    <article class="class-card">
+                        <img src="assets/images/tea-party-kids.jpg" alt="Sprouts & Scouts"
+                            style="width: 100%; height: 200px; object-fit: cover; object-position: top; border-radius: var(--radius-md); margin-bottom: 1rem;">
+                        <h3>Sprouts & Scouts</h3>
+                        <div class="class-description">
+                            <p>Join us for a child-led forest adventure where curiosity sets the course.
+                                We’ll explore wooded trails, wildlife signs, wild edibles (when appropriate), and
+                                whatever wonders the day offers. These sessions are designed to be accessible to young
+                                children, with the understanding that older kids are welcome and encouraged to deepen
+                                the exploration through observation, helping roles, and skill-building.
+                                The pace is guided by our youngest adventurers, while older participants naturally take
+                                on leadership, inquiry, and mentorship roles. Each walk is different—we adapt to the
+                                energy, interests, and needs of the group.
+                                Adults help shepherd the experience while children choose, create, negotiate, and
+                                practice social skills in a real-world setting.
+                                Come prepared for whatever adventure unfolds: snacks, water, bug protection, and
+                                weather-/terrain-appropriate clothing and footwear are recommended.</p>
+                        </div>
+                        <button class="btn btn-primary toggle-desc-btn" style="margin-top: 1rem;">Read More</button>
+
+                    </article>
+
+                    <!-- Forest Crafts -->
+                    <article class="class-card">
+                        <img src="assets/images/nature-crafts.jpg" alt="Forest Crafts"
+                            style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-md); margin-bottom: 1rem;">
+                        <h3>Forest Crafts</h3>
+                        <div class="class-description">
+                            <p>Creative sessions focusing on using natural materials to create art and tools.
+                                Children learn to use natural materials to create beautiful art and functional tools.
+                                We usually start this session with play time in the open field, then move to the picnic
+                                tables for a craft. The session is mostly aimed at preschool and elementary-aged
+                                children.
+                                This class encourages patience, fine motor skills, and an appreciation for the gifts the
+                                earth provides.
+                                Projects are often seasonal and students are encouraged to bring their own ideas to life
+                                using what they find in the forest.</p>
+                        </div>
+                        <button class="btn btn-primary toggle-desc-btn" style="margin-top: 1rem;">Read More</button>
+
+                    </article>
+
+                    <!-- Nature Navigators -->
+                    <article class="class-card">
+                        <img src="assets/images/sundial.jpg" alt="Nature Navigators"
+                            style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-md); margin-bottom: 1rem;">
+                        <h3>Nature Navigators</h3>
+                        <div class="class-description">
+                            <p>Nature Navigators is a hiking and learning session that includes some element of outdoor
+                                or survival skills. This could be anything from learning to use a compass, learning wild
+                                native edible plants, to building a lean-to shelter. This session is great for school
+                                aged kids all the way through high school.
+                                This session is in the LATE AFTERNOON to accommodate kids that are currently in school.
+                                This may change during the summer.
+                                Please bring anything your family will need, like water and snacks. We usually have a
+                                snack time in the middle of the session</p>
+                        </div>
+                        <button class="btn btn-primary toggle-desc-btn" style="margin-top: 1rem;">Read More</button>
+
+                    </article>
+
+                    <!-- Forest Friends -->
+                    <article class="class-card">
+                        <img src="assets/images/hammock-hugs.jpg" alt="Forest Friends"
+                            style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-md); margin-bottom: 1rem;">
+                        <h3>Forest Friends</h3>
+                        <div class="class-description">
+                            <p>This session is child-led, with a focus on learning through play. We will hike a path,
+                                explore the varied terrains, sing songs, and have storytime. This session is appropriate
+                                for toddlers, preschoolers, and elementary aged children. Please bring everything your
+                                family will need: water, sunscreen, bug spray</p>
+                        </div>
+                        <button class="btn btn-primary toggle-desc-btn" style="margin-top: 1rem;">Read More</button>
+
+                    </article>
+
+                    <!-- Nature Lab -->
+                    <article class="class-card">
+                        <img src="assets/images/kid-with-fish.jpg" alt="Nature Lab"
+                            style="width: 100%; height: 200px; object-fit: cover; object-position: top; border-radius: var(--radius-md); margin-bottom: 1rem;">
+                        <h3>Nature Lab</h3>
+                        <div class="class-description">
+                            <p>Nature Lab is a STEM focused session for kids of all ages. Each Month we will meet to
+                                conduct a new experiment or STEM activity centered on our monthly theme.</p>
+                        </div>
+                        <button class="btn btn-primary toggle-desc-btn" style="margin-top: 1rem;">Read More</button>
+
+                    </article>
+
+                    <!-- Wildwood Games -->
+                    <article class="class-card">
+                        <img src="assets/images/falling-rock.jpg" alt="Wildwood Games"
+                            style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-md); margin-bottom: 1rem;">
+                        <h3>Wildwood Games</h3>
+                        <div class="class-description">
+                            <p>Wildwood Games is a fun session geared towards elementary aged children. At each session
+                                we will meet at shelter #1 for a quick snack and then spread out in the open area nearby
+                                to play an outdoor game or two. Children will build social skills such as cooperation
+                                and sportsmanship while having fun playing games such as hide and seek, king of the
+                                hill, freeze tag ect, possibly with a Forest themed twist.</p>
+                        </div>
+                        <button class="btn btn-primary toggle-desc-btn" style="margin-top: 1rem;">Read More</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer"
+        style="background: var(--clr-primary); color: white; padding: 2rem 0; margin-top: auto;">
+        <div class="container text-center">
+            <p>&copy; 2026 Tulsa Area Forest School. A 501(c)(3) Organization.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

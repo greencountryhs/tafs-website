@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Us | Tulsa Area Forest School</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .donation-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .donation-card {
+            background: white;
+            padding: 3rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            flex: 1 1 300px;
+            max-width: 400px;
+            border-top: 5px solid var(--clr-secondary);
+        }
+
+        .donation-card h2 {
+            margin-bottom: 1rem;
+            color: var(--clr-primary);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.jpg" alt="Tulsa Area Forest School Logo" width="100">
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+
+                    <li><a href="sessions.html" class="nav-link">Sessions</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="team.html" class="nav-link">Team</a></li>
+                    <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+                    <li><a href="donations.html" class="btn btn-secondary active">Donate</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section text-center">
+            <div class="container">
+                <h1>Support Our Mission</h1>
+                <p>As a 501(c)(3) non-profit, we rely on your generous support to keep nature education accessible.</p>
+                <div style="max-width: 800px; margin: 2rem auto;">
+                    <img src="assets/images/kids-around-fire.jpg" alt="Children gathering around a fire"
+                        style="width: 100%; max-height: 400px; object-fit: cover; border-radius: var(--radius-md);">
+                </div>
+
+                <div class="donation-options">
+
+                    <div class="donation-card">
+                        <h2>Amazon Wishlist</h2>
+                        <p style="margin-bottom: 2rem;">Help us stock our outdoor classroom with essential supplies.
+                            Direct purchase items that we need the most.</p>
+                        <a href="https://www.amazon.com/registries/gl/guest-view/12IEODBWL1RIX?ref_=cm_sw_r_apann_ggr-subnav-share_6CR37GBSCF52B10Q8J8F&language=en-US"
+                            class="btn btn-primary">View Wishlist on Amazon</a>
+                    </div>
+
+                    <div class="donation-card">
+                        <h2>Cash App</h2>
+                        <p style="margin-bottom: 2rem;">Quick and easy monetary donations. Your funds go directly to
+                            operating costs and scholarships.</p>
+                        <div
+                            style="background: #eee; padding: 1rem; margin-bottom: 1rem; font-family: monospace; font-size: 1.2rem;">
+                            $TulsaForestSchool</div>
+                        <a href="https://cash.app/$tulsaforestschool" class="btn btn-secondary">Donate via CashApp</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer"
+        style="background: var(--clr-primary); color: white; padding: 2rem 0; margin-top: auto;">
+        <div class="container text-center">
+            <p>&copy; 2026 Tulsa Area Forest School. A 501(c)(3) Organization.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

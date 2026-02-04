@@ -1,0 +1,84 @@
+/* Header Styles */
+.site-header {
+    background-color: var(--clr-white);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: var(--spacing-sm);
+    flex-direction: row-reverse;
+    /* Logo on right, Nav on left */
+}
+
+.logo img {
+    display: block;
+    max-height: 80px;
+    width: auto;
+}
+
+.nav-list {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--clr-text);
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--clr-primary);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 24px;
+    height: 3px;
+    background-color: var(--clr-text);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .header-inner {
+        flex-direction: row;
+        /* Standard for mobile? Or keep reverse? Let's tick to user request */
+        /* If reverse, logo is right, hambuger is left. */
+    }
+
+    .nav-list {
+        display: none;
+        /* Needs JS to toggle */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+}

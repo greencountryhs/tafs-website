@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Reviews | Tulsa Area Forest School</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .review-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            border-left: 5px solid var(--clr-accent);
+        }
+
+        .review-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--clr-text-light);
+        }
+
+        .review-author {
+            font-weight: 600;
+            color: var(--clr-primary);
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.jpg" alt="Tulsa Area Forest School Logo" width="100">
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+
+                    <li><a href="sessions.html" class="nav-link">Sessions</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="team.html" class="nav-link">Team</a></li>
+                    <li><a href="reviews.html" class="nav-link active">Reviews</a></li>
+                    <li><a href="donations.html" class="btn btn-secondary">Donate</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section text-center">
+            <div class="container">
+                <h1>Family Reviews</h1>
+                <p>What our community is saying about their time in the forest.</p>
+                <div style="max-width: 800px; margin: 2rem auto;">
+                    <img src="assets/images/girl-with-walking-stick.jpg" alt="Girl exploring with a walking stick"
+                        style="width: 100%; max-height: 400px; object-fit: cover; border-radius: var(--radius-md);">
+                </div>
+
+                <div class="reviews-grid">
+                    <blockquote class="review-card">
+                        <p class="review-text">"Forest School is the best! You learn about nature and stuff. Everyone
+                            should join!"</p>
+                        <footer class="review-author">- AGJ. age 7</footer>
+                    </blockquote>
+
+                    <blockquote class="review-card">
+                        <p class="review-text">"Forest School is very very good. I like playing with my friends. Thank
+                            you!"</p>
+                        <footer class="review-author">-DR, age 5</footer>
+                    </blockquote>
+
+                    <blockquote class="review-card">
+                        <p class="review-text">"We are so grateful to find a group to explore nature with! LOVE the
+                            variety of adventures available too."</p>
+                        <footer class="review-author">- PC, Parent</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer"
+        style="background: var(--clr-primary); color: white; padding: 2rem 0; margin-top: auto;">
+        <div class="container text-center">
+            <p>&copy; 2026 Tulsa Area Forest School. A 501(c)(3) Organization.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

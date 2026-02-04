@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team | Tulsa Area Forest School</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #ddd;
+            margin: 0 auto 1rem;
+            border: 4px solid var(--clr-primary);
+        }
+
+        .team-member h3 {
+            margin-bottom: 0.5rem;
+            color: var(--clr-primary);
+        }
+
+        .team-member .role {
+            font-weight: 600;
+            color: var(--clr-secondary);
+            margin-bottom: 1rem;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.jpg" alt="Tulsa Area Forest School Logo" width="100">
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+
+                    <li><a href="sessions.html" class="nav-link">Sessions</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="team.html" class="nav-link active">Team</a></li>
+                    <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+                    <li><a href="donations.html" class="btn btn-secondary">Donate</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section text-center">
+            <div class="container">
+                <h1>Session Leaders</h1>
+                <p>Meet the dedicated team behind Tulsa Area Forest School.</p>
+
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="assets/images/piper-bio.jpeg" alt="Piper" class="team-photo">
+                        <h3>Piper</h3>
+                        <span class="role">Executive Director </span>
+                        <p>I love watching my son’s confidence grow as he learns cooperation and self regulation through
+                            exploring nature with his TAFS friends.</p>
+                    </div>
+
+                    <div class="team-member">
+                        <img src="assets/images/mai-cropped.jpeg" alt="Mai" class="team-photo">
+                        <h3>Mai</h3>
+                        <span class="role">Board Member</span>
+                        <p>My girls love going to TAFS! They really enjoy connecting with others in their favorite
+                            place: the outdoors. They continue to develop environmental stewardship, skills, peace, and
+                            mental & physical health by attending TAFS.</p>
+                    </div>
+
+                    <div class="team-member">
+                        <img src="assets/images/jon-bio1.jpg" alt="Jon" class="team-photo">
+                        <h3>Jon</h3>
+                        <span class="role">Board Member</span>
+                        <p>TAFS has been the perfect place for our family to express thier passion for learning,
+                            teaching, and enjoying wild places</p>
+                    </div>
+
+                    <div class="team-member">
+                        <img src="assets/images/sabrina-cropped.jpeg" alt="Sabrina" class="team-photo">
+                        <h3>Sabrina Leggett</h3>
+                        <span class="role">Board Member</span>
+                        <p>We joined forest school to try to have fun with a community of friends who value nature and
+                            the natural world.</p>
+                    </div>
+
+                    <div class="team-member">
+                        <img src="assets/images/morgan1.jpg" alt="Morgan" class="team-photo">
+                        <h3>Morgan</h3>
+                        <span class="role">Board Member</span>
+                        <p>I love to share my excitement for my family, nature, and community with these great people
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer"
+        style="background: var(--clr-primary); color: white; padding: 2rem 0; margin-top: auto;">
+        <div class="container text-center">
+            <p>&copy; 2026 Tulsa Area Forest School. A 501(c)(3) Organization.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
