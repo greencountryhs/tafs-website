@@ -91,4 +91,47 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+
+    // Raffle prize photo carousel (raffle.html)
+    const raffleCarousel = document.querySelector('[data-raffle-carousel]');
+    if (raffleCarousel) {
+        const track = raffleCarousel.querySelector('.raffle-carousel__track');
+        const slides = raffleCarousel.querySelectorAll('.raffle-carousel__slide');
+        const prevBtn = raffleCarousel.querySelector('[data-carousel-prev]');
+        const nextBtn = raffleCarousel.querySelector('[data-carousel-next]');
+        const dotButtons = raffleCarousel.querySelectorAll('[data-carousel-dot]');
+        const total = slides.length;
+        let index = 0;
+
+        function setSlideAttributes() {
+            slides.forEach((slide, i) => {
+                slide.setAttribute('aria-hidden', i !== index ? 'true' : 'false');
+            });
+            dotButtons.forEach((dot, i) => {
+                const selected = i === index;
+                dot.setAttribute('aria-selected', selected);
+                dot.tabIndex = selected ? 0 : -1;
+            });
+        }
+
+        function goTo(i) {
+            index = ((i % total) + total) % total;
+            if (track) {
+                const step = 100 / total;
+                track.style.transform = `translateX(-${index * step}%)`;
+            }
+            setSlideAttributes();
+        }
+
+        prevBtn?.addEventListener('click', () => goTo(index - 1));
+        nextBtn?.addEventListener('click', () => goTo(index + 1));
+        dotButtons.forEach((dot) => {
+            const i = parseInt(dot.getAttribute('data-carousel-dot'), 10);
+            if (!Number.isNaN(i)) {
+                dot.addEventListener('click', () => goTo(i));
+            }
+        });
+
+        goTo(0);
+    }
 });

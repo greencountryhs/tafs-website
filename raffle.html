@@ -121,38 +121,164 @@
             min-height: min(1026px, 85vh);
         }
 
-        .raffle-prize-gallery {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1rem;
-            max-width: 900px;
-            margin: 1.5rem auto 0;
+        .raffle-carousel {
+            max-width: 640px;
+            margin: 1rem auto 0;
         }
 
-        @media (min-width: 640px) {
-            .raffle-prize-gallery {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (min-width: 960px) {
-            .raffle-prize-gallery {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        .raffle-prize-gallery__cell {
-            border-radius: var(--radius-md);
+        .raffle-carousel__viewport {
             overflow: hidden;
-            aspect-ratio: 4 / 3;
-            background: #e5ebe6;
+            width: 100%;
+            border-radius: var(--radius-md);
+            height: 260px;
+            background: #eceeec;
         }
 
-        .raffle-prize-gallery__cell img {
-            width: 100%;
+        @media (min-width: 480px) {
+            .raffle-carousel__viewport {
+                height: 300px;
+            }
+        }
+
+        @media (min-width: 720px) {
+            .raffle-carousel__viewport {
+                height: 340px;
+            }
+        }
+
+        .raffle-carousel__track {
+            display: flex;
+            width: 500%;
             height: 100%;
-            object-fit: cover;
+            transition: transform 0.35s ease;
+        }
+
+        .raffle-carousel__slide {
+            flex: 0 0 20%;
+            height: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            padding: 0.35rem;
+        }
+
+        .raffle-carousel__slide img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            object-position: center;
             display: block;
+        }
+
+        .raffle-carousel__controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .raffle-carousel__btn {
+            min-width: 2.75rem;
+            padding: 0.45rem 0.85rem;
+            font-size: 1.25rem;
+            line-height: 1;
+        }
+
+        .raffle-carousel__dots {
+            display: flex;
+            gap: 0.45rem;
+            align-items: center;
+        }
+
+        .raffle-carousel__dot {
+            width: 10px;
+            height: 10px;
+            padding: 0;
+            border: none;
+            border-radius: 50%;
+            background: #c5d4c7;
+            cursor: pointer;
+        }
+
+        .raffle-carousel__dot[aria-selected="true"] {
+            background: var(--clr-primary);
+        }
+
+        .raffle-carousel__dot:focus-visible {
+            outline: 2px solid var(--clr-primary);
+            outline-offset: 2px;
+        }
+
+        .raffle-hero-ctas {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.65rem;
+            margin: 0 auto 1rem;
+            max-width: 720px;
+        }
+
+        .raffle-glance {
+            max-width: 640px;
+            margin: 0 auto 1.25rem;
+            padding: 1rem 1.25rem;
+            text-align: left;
+            background: white;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            border-top: 4px solid var(--clr-secondary);
+            font-size: 0.92rem;
+        }
+
+        .raffle-glance h2 {
+            margin: 0 0 0.65rem;
+            font-size: 1rem;
+            text-align: center;
+            color: var(--clr-primary);
+        }
+
+        .raffle-glance p {
+            margin: 0 0 0.45rem;
+        }
+
+        .raffle-glance__tiers {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.15rem 1rem;
+            margin: 0.35rem 0 0.5rem;
+            padding: 0;
+            list-style: none;
+            font-variant-numeric: tabular-nums;
+        }
+
+        @media (max-width: 420px) {
+            .raffle-glance__tiers {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        #how-to-enter,
+        #raffle-ticket-options {
+            scroll-margin-top: 5rem;
+        }
+
+        .raffle-bottom-cta {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.65rem;
+            margin: 2.5rem auto 0;
+            padding: 1.25rem 1rem;
+            max-width: 720px;
+            background: var(--clr-bg);
+            border-radius: var(--radius-md);
+            border: 1px solid #dde8df;
         }
     </style>
 </head>
@@ -171,6 +297,7 @@
                     <li><a href="faq.html" class="nav-link">FAQ</a></li>
                     <li><a href="team.html" class="nav-link">Team</a></li>
                     <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+                    <li><a href="raffle.html" class="nav-link active">Raffle</a></li>
                     <li><a href="donations.html" class="btn btn-secondary">Donate</a></li>
                 </ul>
                 <button class="mobile-menu-toggle" aria-label="Toggle Menu">
@@ -190,35 +317,83 @@
                     Proceeds support supplies for new programs, scholarships, class materials, and expanded experiences
                     during forest school adventures.</p>
 
-                <div class="raffle-prize-gallery" role="group" aria-label="Raffle item photos">
-                    <div class="raffle-prize-gallery__cell">
-                        <img src="assets/images/tulsa-forest-school-sensory-bin-bugs-rice-play-kit.webp.webp"
-                            alt="Sensory play bin with dyed rice, toy insects, scoops, and nature-themed materials for kids"
-                            loading="lazy" width="800" height="600">
+                <div class="raffle-hero-ctas">
+                    <a href="#how-to-enter" class="btn btn-primary">Buy Raffle Tickets</a>
+                    <a href="#raffle-ticket-options" class="btn btn-secondary">View Ticket Options</a>
+                    <a href="https://www.facebook.com/profile.php?id=61587055600956" class="btn btn-secondary"
+                        target="_blank" rel="noopener noreferrer">Visit Play Sensations</a>
+                </div>
+
+                <div class="raffle-glance">
+                    <h2>Raffle at a Glance</h2>
+                    <p><strong>Prize:</strong> Custom forest-themed sensory play kit from Play Sensations, valued over
+                        $50.</p>
+                    <p><strong>Tickets:</strong></p>
+                    <ul class="raffle-glance__tiers">
+                        <li>$3 = 1</li>
+                        <li>$5 = 2</li>
+                        <li>$10 = 5</li>
+                        <li>$20 = 12</li>
+                        <li>$30 = 20</li>
+                        <li>$50 = 40</li>
+                        <li>$100 = 100</li>
+                    </ul>
+                    <p><strong>Drawing:</strong> May 29 at the Tulsa Forest School potluck.</p>
+                    <p><strong>To enter:</strong> Buy tickets in Step 1, then complete the form in Step 2.</p>
+                </div>
+
+                <div class="raffle-carousel" data-raffle-carousel aria-roledescription="carousel"
+                    aria-label="Prize photos">
+                    <div class="raffle-carousel__viewport">
+                        <div class="raffle-carousel__track">
+                            <figure class="raffle-carousel__slide" id="raffle-slide-0" aria-hidden="false">
+                                <img src="assets/images/tulsa-forest-school-sensory-bin-bugs-rice-play-kit.webp"
+                                    alt="Sensory play bin with dyed rice, toy insects, scoops, and nature-themed materials for kids"
+                                    loading="eager" decoding="async" width="800" height="600">
+                            </figure>
+                            <figure class="raffle-carousel__slide" id="raffle-slide-1" aria-hidden="true">
+                                <img src="assets/images/tulsa-kids-nature-play-sensory-kit-fundraiser-prize.webp"
+                                    alt="Nature play sensory kit with sensory tubs, toy bugs, animal stamps, scoops, flowers, and activity materials"
+                                    loading="lazy" width="800" height="600">
+                            </figure>
+                            <figure class="raffle-carousel__slide" id="raffle-slide-2" aria-hidden="true">
+                                <img src="assets/images/homeschool-preschool-sensory-play-kit-tulsa-families.webp"
+                                    alt="Collapsible sensory play bucket with toy insects, dinosaur figures, scoops, stamps, mushrooms, and flowers"
+                                    loading="lazy" width="800" height="600">
+                            </figure>
+                            <figure class="raffle-carousel__slide" id="raffle-slide-3" aria-hidden="true">
+                                <img src="assets/images/tulsa-toddler-sensory-garden-play-activity-kit.webp"
+                                    alt="Close-up of sensory garden play with small pots, toy flowers, mushrooms, shovel, watering can, and play sand"
+                                    loading="lazy" width="800" height="600">
+                            </figure>
+                            <figure class="raffle-carousel__slide" id="raffle-slide-4" aria-hidden="true">
+                                <img src="assets/images/nature-based-sensory-play-materials-for-kids-tulsa.webp"
+                                    alt="Tubs of sensory play materials including dyed rice, play sand, foam beads, and colorful dough for children"
+                                    loading="lazy" width="800" height="600">
+                            </figure>
+                        </div>
                     </div>
-                    <div class="raffle-prize-gallery__cell">
-                        <img src="assets/images/tulsa-kids-nature-play-sensory-kit-fundraiser-prize.webp.webp"
-                            alt="Nature play sensory kit with sensory tubs, toy bugs, animal stamps, scoops, flowers, and activity materials"
-                            loading="lazy" width="800" height="600">
-                    </div>
-                    <div class="raffle-prize-gallery__cell">
-                        <img src="assets/images/homeschool-preschool-sensory-play-kit-tulsa-families.webp.webp"
-                            alt="Collapsible sensory play bucket with toy insects, dinosaur figures, scoops, stamps, mushrooms, and flowers"
-                            loading="lazy" width="800" height="600">
-                    </div>
-                    <div class="raffle-prize-gallery__cell">
-                        <img src="assets/images/tulsa-toddler-sensory-garden-play-activity-kit.webp.webp"
-                            alt="Close-up of sensory garden play with small pots, toy flowers, mushrooms, shovel, watering can, and play sand"
-                            loading="lazy" width="800" height="600">
-                    </div>
-                    <div class="raffle-prize-gallery__cell">
-                        <img src="assets/images/nature-based-sensory-play-materials-for-kids-tulsa.webp.webp"
-                            alt="Tubs of sensory play materials including dyed rice, play sand, foam beads, and colorful dough for children"
-                            loading="lazy" width="800" height="600">
+                    <div class="raffle-carousel__controls">
+                        <button type="button" class="btn btn-secondary raffle-carousel__btn" data-carousel-prev
+                            aria-label="Previous prize photo">&#8249;</button>
+                        <div class="raffle-carousel__dots" role="tablist" aria-label="Choose prize photo">
+                            <button type="button" class="raffle-carousel__dot" data-carousel-dot="0" role="tab"
+                                aria-selected="true" aria-label="Photo 1 of 5"></button>
+                            <button type="button" class="raffle-carousel__dot" data-carousel-dot="1" role="tab"
+                                aria-selected="false" aria-label="Photo 2 of 5"></button>
+                            <button type="button" class="raffle-carousel__dot" data-carousel-dot="2" role="tab"
+                                aria-selected="false" aria-label="Photo 3 of 5"></button>
+                            <button type="button" class="raffle-carousel__dot" data-carousel-dot="3" role="tab"
+                                aria-selected="false" aria-label="Photo 4 of 5"></button>
+                            <button type="button" class="raffle-carousel__dot" data-carousel-dot="4" role="tab"
+                                aria-selected="false" aria-label="Photo 5 of 5"></button>
+                        </div>
+                        <button type="button" class="btn btn-secondary raffle-carousel__btn" data-carousel-next
+                            aria-label="Next prize photo">&#8250;</button>
                     </div>
                 </div>
 
-                <div class="raffle-details">
+                <div class="raffle-details" id="raffle-ticket-options">
                     <h2>Prize</h2>
                     <p>Custom forest-themed sensory play kit from Play Sensations, valued at over $50.</p>
 
@@ -241,7 +416,8 @@
                         contact the winner directly using the contact information submitted on the raffle entry form.</p>
                 </div>
 
-                <h2 class="text-center" style="margin-bottom: 0.5rem;">Step 1 — Purchase raffle tickets</h2>
+                <h2 class="text-center" id="how-to-enter" style="margin-bottom: 0.5rem;">Step 1 — Purchase raffle
+                    tickets</h2>
                 <p class="raffle-lead" style="margin-bottom: 0;">Buy your raffle tickets through Cash App using the button
                     below. Complete your payment before you complete your entry form in Step 2.</p>
 
@@ -258,19 +434,19 @@
 
                 <h2 class="text-center" style="margin-top: 2.5rem; margin-bottom: 0.75rem;">Step 2 — Complete your entry
                     form</h2>
-                <div class="raffle-process" style="margin-bottom: 1.5rem;">
-                    <p style="margin-top: 0;">The form below does not show full instructions. Before you submit:</p>
-                    <ul style="margin: 0.5rem 0 0; padding-left: 1.35rem; text-align: left;">
-                        <li>Enter <strong>how many raffle tickets you purchased</strong> and <strong>how much you paid</strong>
-                            (your payment amount).</li>
-                        <li>If the payment amount or ticket count does not match what we see on our side, we may contact you
-                            to clarify before entries are finalized.</li>
-                    </ul>
-                </div>
+                <p class="raffle-process" style="margin-bottom: 1.5rem; margin-top: 0;">After purchasing tickets, fill out
+                    the short form below. This does not replace payment. It helps us match your raffle payment to your
+                    entries and contact you if you win.</p>
 
                 <div class="tally-embed-wrap">
                     <iframe data-tally-src="https://tally.so/embed/oblA6b?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="1026" frameborder="0" marginheight="0" marginwidth="0" title="TFS May Raffle"></iframe>
                     <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+                </div>
+
+                <div class="raffle-bottom-cta">
+                    <a href="#how-to-enter" class="btn btn-primary">Buy Raffle Tickets</a>
+                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+                    <a href="donations.html" class="btn btn-secondary">Support Tulsa Area Forest School</a>
                 </div>
             </div>
         </section>
