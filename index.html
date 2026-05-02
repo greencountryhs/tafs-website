@@ -23,34 +23,34 @@
             margin: 1.25rem auto 0;
             border-radius: var(--radius-md);
             box-shadow: var(--shadow-md);
-            background-image: url('assets/images/tulsa-toddler-sensory-garden-play-activity-kit.webp');
-            background-size: cover;
-            background-position: center;
-            position: relative;
             overflow: hidden;
-            min-height: 240px;
             display: flex;
-            align-items: flex-end;
+            flex-direction: column;
             text-align: left;
+            background: var(--clr-bg);
         }
 
-        .home-raffle-card::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(165deg,
-                    rgba(26, 58, 32, 0.88) 0%,
-                    rgba(44, 85, 48, 0.55) 45%,
-                    rgba(0, 0, 0, 0.35) 100%);
-            pointer-events: none;
+        .home-raffle-card__visual {
+            background: #e8ece9;
+            padding: 0.65rem 0.65rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .home-raffle-card__img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            border-radius: var(--radius-sm) var(--radius-sm) 0 0;
         }
 
         .home-raffle-card__inner {
-            position: relative;
-            z-index: 1;
-            padding: 1.5rem 1.35rem 1.65rem;
+            padding: 1.25rem 1.35rem 1.4rem;
             width: 100%;
             box-sizing: border-box;
+            background: var(--clr-primary);
         }
 
         .home-raffle-card__inner h3 {
@@ -62,7 +62,6 @@
         .home-raffle-card__inner h3 a {
             color: #fff;
             text-decoration: none;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
         }
 
         .home-raffle-card__inner h3 a:hover {
@@ -74,7 +73,6 @@
             color: rgba(255, 255, 255, 0.96);
             font-size: 0.98rem;
             line-height: 1.45;
-            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
         }
 
         .home-raffle-card .btn.btn-primary {
@@ -84,12 +82,8 @@
         }
 
         @media (min-width: 480px) {
-            .home-raffle-card {
-                min-height: 260px;
-            }
-
             .home-raffle-card__inner {
-                padding: 1.65rem 1.5rem 1.75rem;
+                padding: 1.35rem 1.5rem 1.5rem;
             }
         }
     </style>
@@ -147,6 +141,12 @@
             <div class="container text-center">
                 <h2>Upcoming Events</h2>
                 <div class="home-raffle-card">
+                    <div class="home-raffle-card__visual">
+                        <img class="home-raffle-card__img"
+                            src="assets/images/tulsa-toddler-sensory-garden-play-activity-kit.webp"
+                            alt="Sensory garden play activity kit with small pots, toy flowers, and play materials"
+                            width="800" height="600" loading="lazy" decoding="async">
+                    </div>
                     <div class="home-raffle-card__inner">
                         <h3>
                             <a href="raffle.html">May Forest School Raffle</a>
