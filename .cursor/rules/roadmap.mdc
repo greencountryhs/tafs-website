@@ -1,0 +1,65 @@
+---
+description: Future roadmap notes that should not be treated as current tasks
+globs:
+  - "**/*"
+alwaysApply: true
+---
+
+# Roadmap notes
+
+These are future direction notes only.
+
+Do not create these features unless the user explicitly requests them.
+
+## Public site direction
+
+The public-facing Tulsa Area Forest School website should remain a static marketing and information site.
+
+It may eventually include:
+
+- blog posts
+- news posts
+- newsletter signup links or embeds
+- fundraiser pages
+- event pages
+- donation campaigns
+- links to a separate web app
+
+These are roadmap possibilities, not current tasks.
+
+Do not create empty blog, news, newsletter, app, or portal pages unless the user specifically asks.
+
+## Future web app direction
+
+If an operational web app is built later, it should be treated as a separate system from the public website.
+
+Preferred future structure:
+
+- public site: `www.tulsaareaforestschool.org`
+- future app: `app.tulsaareaforestschool.org`
+
+The future app may eventually handle:
+
+- class inventory
+- applications
+- class tracking
+- parent/student records
+- communications
+- attendance
+- payments
+- admin workflows
+- private dashboards
+
+Do not add backend app architecture to the public site unless explicitly requested.
+
+## Future blog/news direction
+
+The site may eventually have regular blog or news posts.
+
+For now:
+
+- do not create a blog/news section unless requested
+- do not create empty placeholder pages
+- do not add newsletter systems unless requested
+
+If blog/news is requested later, use static HTML pages first unless the user approves a migration to a static site generator or CMS.

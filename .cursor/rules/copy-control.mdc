@@ -1,0 +1,70 @@
+---
+description: Control public-facing copy changes
+globs:
+  - "**/*.html"
+alwaysApply: true
+---
+
+# Copy change control
+
+## Default rule
+
+Do not change public-facing copy unless the user explicitly asks for copy changes.
+
+This includes:
+
+- headings
+- body text
+- program descriptions
+- event descriptions
+- donation language
+- fundraiser language
+- raffle language
+- contact language
+- parent-facing instructions
+- safety language
+- policy language
+- testimonials
+- quotes
+- captions
+- calls to action
+- metadata
+
+## Copy recommendations
+
+If copy appears unclear, outdated, repetitive, or improvable, report it as a recommendation only.
+
+Do not apply copy changes unless the task includes copy editing or the user approves the copy.
+
+## Sensitive content
+
+Do not change the meaning of:
+
+- child safety language
+- liability/policy language
+- pricing
+- dates
+- times
+- age ranges
+- donation instructions
+- scholarship language
+- raffle/fundraiser rules
+- application/registration instructions
+- nonprofit or community benefit claims
+
+## Do not invent content
+
+Do not invent:
+
+- dates
+- prices
+- program details
+- staff names
+- testimonials
+- donor claims
+- registration rules
+- legal/policy language
+- nonprofit status claims
+- safety guarantees
+
+If details are missing, use clearly marked placeholder text only when the user asks for a draft.

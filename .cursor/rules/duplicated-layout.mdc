@@ -1,0 +1,51 @@
+---
+description: Rules for repeated header and footer markup
+globs:
+  - "**/*.html"
+alwaysApply: true
+---
+
+# Duplicated layout rules
+
+This site repeats header and footer markup directly in each HTML page.
+
+Known current pages:
+
+- index.html
+- sessions.html
+- faq.html
+- team.html
+- reviews.html
+- contact.html
+- donations.html
+
+## Header and navigation changes
+
+If changing the header, navigation, logo area, mobile menu, or nav links:
+
+1. inspect all HTML pages first
+2. identify all repeated header versions
+3. apply the same intentional change consistently across pages
+4. preserve relative links
+5. preserve mobile menu markup and behavior
+6. confirm the mobile nav still matches the JavaScript expectations
+
+Do not update only one page unless explicitly requested.
+
+## Footer changes
+
+If changing footer links or footer content:
+
+1. inspect all repeated footer versions
+2. update consistently across pages
+3. preserve existing contact, donation, and social links unless asked to change them
+
+## Adding pages
+
+When adding a new public page:
+
+- include the same header/footer structure as existing pages
+- add the page to navigation only if requested or clearly appropriate
+- link to the page from relevant existing pages
+- avoid creating empty placeholder pages
+- update any known page lists if they exist

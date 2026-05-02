@@ -1,0 +1,81 @@
+---
+description: Global project rules for Tulsa Area Forest School website
+globs:
+  - "**/*"
+alwaysApply: true
+---
+
+# Tulsa Area Forest School website rules
+
+## Project context
+
+This is the public-facing website for Tulsa Area Forest School.
+
+The site is currently a static multi-page website using plain HTML, CSS, and vanilla JavaScript.
+
+The site should remain simple, stable, readable, and easy for a non-developer site owner to maintain through Cursor and GitHub.
+
+## Primary purpose of the public site
+
+The public site should help families, donors, and community members:
+
+- understand what Tulsa Area Forest School is
+- learn about available sessions, programs, donations, events, and community updates
+- trust the organization
+- contact the school
+- donate or participate in fundraisers
+- follow clear next steps
+
+## Current architecture direction
+
+Keep the public-facing website as a static HTML/CSS/JS site.
+
+Do not introduce:
+
+- React
+- Next.js
+- Astro
+- Vite
+- npm packages
+- package.json
+- build tools
+- backend logic
+- databases
+- authentication
+- dashboards
+- CMS integrations
+
+unless the user explicitly requests and approves that change.
+
+## Change philosophy
+
+Prefer:
+
+- small changes
+- reversible edits
+- simple HTML/CSS/JS
+- existing styles and patterns
+- plain explanations
+- clear verification
+
+Avoid:
+
+- broad refactors
+- redesigns not requested
+- unnecessary dependencies
+- architecture changes
+- speculative improvements
+- changing unrelated pages or copy
+- touching files outside the requested task
+
+## Default behavior
+
+Before editing, inspect the relevant files.
+
+After editing, summarize:
+
+- what changed
+- which files changed
+- what was checked
+- what still needs manual review
+- any assumptions made

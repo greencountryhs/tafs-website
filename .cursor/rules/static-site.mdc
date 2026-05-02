@@ -1,0 +1,54 @@
+---
+description: Static HTML/CSS/JS site guardrails
+globs:
+  - "**/*.html"
+  - "**/*.css"
+  - "**/*.js"
+alwaysApply: true
+---
+
+# Static site rules
+
+## Architecture
+
+This is a static HTML/CSS/JS website.
+
+Use existing files and patterns unless explicitly told otherwise.
+
+## HTML
+
+When editing HTML:
+
+- preserve semantic structure
+- keep one clear H1 per page
+- preserve existing navigation and footer structure
+- use existing CSS classes where practical
+- use relative links consistently
+- include useful alt text for meaningful images
+- avoid empty placeholder sections on the public site
+
+## CSS
+
+When editing CSS:
+
+- use existing variables and design tokens when available
+- avoid duplicating styles unnecessarily
+- avoid large visual redesigns unless requested
+- keep mobile behavior in mind
+- do not create one-off styling if an existing pattern works
+
+## JavaScript
+
+When editing JavaScript:
+
+- keep it vanilla JS
+- avoid adding dependencies
+- preserve existing mobile nav, FAQ accordion, scroll behavior, and card behavior
+- avoid broad rewrites
+- comment only when it helps clarify non-obvious logic
+
+## No build step
+
+Do not add a build step.
+
+Do not suggest npm commands unless package.json exists and the user specifically asks to change architecture.

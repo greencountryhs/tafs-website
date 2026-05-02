@@ -1,0 +1,70 @@
+---
+description: Low-error AI coding workflow
+globs:
+  - "**/*"
+alwaysApply: true
+---
+
+# Low-error coding workflow
+
+## Required process for every task
+
+For every requested change, follow this process:
+
+1. Inspect relevant files first.
+2. Identify the smallest safe set of files needed.
+3. Explain the proposed scope before editing.
+4. Make only the requested change.
+5. Verify the change.
+6. Summarize the result.
+
+## Before editing
+
+Before changing files, report:
+
+- files inspected
+- files likely needing edits
+- the intended change
+- any risks or uncertainties
+- whether the task affects public-facing copy, forms, navigation, donations, or mobile layout
+
+If the task is simple and clearly scoped, proceed after the scope is clear.
+
+If the task could affect donations, forms, registration, safety language, legal/policy language, or public-facing claims, ask for confirmation before editing.
+
+## During editing
+
+Do not:
+
+- rewrite unrelated sections
+- reformat entire files unnecessarily
+- rename files unless asked
+- move assets unless asked
+- add new tools or dependencies
+- change working links unless required
+- invent missing content
+- silently change site structure
+
+## After editing
+
+Always provide:
+
+1. Files changed
+2. Summary of changes
+3. Checks performed
+4. Anything the user should manually review
+5. Any follow-up recommendations, clearly separated from completed work
+
+## Verification expectations
+
+When possible, verify:
+
+- HTML links still point to existing pages or intentional external URLs
+- CSS class names match existing styles
+- JavaScript behavior is not broken
+- mobile navigation still works if header/nav was touched
+- forms still point to the intended destination
+- new pages are linked correctly
+- no unrelated files were changed
+
+If you cannot run a local preview, say so plainly and explain what was checked by code inspection.
