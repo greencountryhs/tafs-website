@@ -17,13 +17,89 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .home-raffle-card {
+            max-width: 640px;
+            margin: 1.25rem auto 0;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            background-image: url('assets/images/tulsa-toddler-sensory-garden-play-activity-kit.webp');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 240px;
+            display: flex;
+            align-items: flex-end;
+            text-align: left;
+        }
+
+        .home-raffle-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(165deg,
+                    rgba(26, 58, 32, 0.88) 0%,
+                    rgba(44, 85, 48, 0.55) 45%,
+                    rgba(0, 0, 0, 0.35) 100%);
+            pointer-events: none;
+        }
+
+        .home-raffle-card__inner {
+            position: relative;
+            z-index: 1;
+            padding: 1.5rem 1.35rem 1.65rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .home-raffle-card__inner h3 {
+            margin: 0 0 0.5rem;
+            font-size: 1.2rem;
+            line-height: 1.25;
+        }
+
+        .home-raffle-card__inner h3 a {
+            color: #fff;
+            text-decoration: none;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+        }
+
+        .home-raffle-card__inner h3 a:hover {
+            text-decoration: underline;
+        }
+
+        .home-raffle-card__inner p {
+            margin: 0 0 1rem;
+            color: rgba(255, 255, 255, 0.96);
+            font-size: 0.98rem;
+            line-height: 1.45;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
+        }
+
+        .home-raffle-card .btn.btn-primary {
+            padding: 0.65rem 1.4rem;
+            font-size: 1.05rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+        }
+
+        @media (min-width: 480px) {
+            .home-raffle-card {
+                min-height: 260px;
+            }
+
+            .home-raffle-card__inner {
+                padding: 1.65rem 1.5rem 1.75rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <header class="site-header">
         <div class="container header-inner">
             <a href="index.html" class="logo">
-                <img src="assets/images/logo.jpg" alt="Tulsa Area Forest School Logo" width="100">
+                <img src="assets/images/Logo-no-background.png" alt="Tulsa Area Forest School logo" width="100">
             </a>
             <nav class="main-nav">
                 <ul class="nav-list">
@@ -70,15 +146,15 @@
         <section class="announcement section">
             <div class="container text-center">
                 <h2>Upcoming Events</h2>
-                <div
-                    style="max-width: 640px; margin: 1.25rem auto 0; padding: 1.25rem 1.5rem; background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); text-align: left;">
-                    <h3 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.15rem;">
-                        <a href="raffle.html" style="color: var(--clr-primary); text-decoration: none;">May Forest School
-                            Raffle</a>
-                    </h3>
-                    <p style="margin: 0 0 0.75rem;">Buy raffle tickets for a custom forest-themed sensory play kit from
-                        Play Sensations. Winner drawn May 29 at the Tulsa Forest School potluck.</p>
-                    <a href="raffle.html" class="btn btn-primary">View Raffle Details</a>
+                <div class="home-raffle-card">
+                    <div class="home-raffle-card__inner">
+                        <h3>
+                            <a href="raffle.html">May Forest School Raffle</a>
+                        </h3>
+                        <p>Buy raffle tickets for a custom forest-themed sensory play kit from Play Sensations. Winner
+                            drawn May 29 at the Tulsa Forest School potluck.</p>
+                        <a href="raffle.html" class="btn btn-primary">View Raffle Details</a>
+                    </div>
                 </div>
             </div>
         </section>
