@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Tulsa Area Forest School | Family Intake & Membership</title>
+    <meta name="description"
+        content="Complete the Tulsa Area Forest School family intake form, learn about the 30-day trial period, semester dues, volunteer options, and how to get started.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .join-hero {
+            padding: 4rem 1rem 3rem;
+            background: linear-gradient(rgba(44, 85, 48, 0.85), rgba(44, 85, 48, 0.7)),
+                url('assets/images/kids-on-a-bridge.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .join-hero h1 {
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+            margin-bottom: 1rem;
+        }
+
+        .join-hero p {
+            max-width: 720px;
+            margin: 0 auto 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .join-steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.25rem;
+            margin-top: 2rem;
+            text-align: left;
+        }
+
+        .join-step-card {
+            background: white;
+            padding: 1.25rem 1.35rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid #eed;
+        }
+
+        .join-step-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--clr-primary);
+        }
+
+        .join-step-card p {
+            margin: 0;
+            color: var(--clr-text-light);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .join-info-panel {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1.5rem 1.75rem;
+            background: white;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            text-align: left;
+        }
+
+        .join-info-panel ul {
+            list-style: disc;
+            padding-left: 1.25rem;
+            margin-top: 1rem;
+        }
+
+        .join-info-panel li {
+            margin-bottom: 0.65rem;
+            color: var(--clr-text-light);
+            line-height: 1.5;
+        }
+
+        .tally-embed-wrap {
+            max-width: 720px;
+            margin: 0 auto;
+            text-align: left;
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+            border-top: 4px solid var(--clr-secondary);
+        }
+
+        .tally-embed-wrap iframe {
+            width: 100%;
+            max-width: 100%;
+            display: block;
+            border: 0;
+            min-height: min(800px, 85vh);
+        }
+
+        .join-secondary-contact {
+            max-width: 520px;
+            margin: 0 auto;
+            padding: 1.25rem 1.5rem;
+            background: var(--clr-bg);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            font-size: 0.95rem;
+        }
+
+        .join-secondary-contact h2 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .join-secondary-contact p {
+            color: var(--clr-text-light);
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/images/Logo-no-background.png" alt="Tulsa Area Forest School logo" width="100">
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+
+                    <li><a href="sessions.html" class="nav-link">Sessions</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="team.html" class="nav-link">Team</a></li>
+                    <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+                    <li><a href="raffle.html" class="nav-link">Raffle</a></li>
+                    <li><a href="join.html" class="nav-link active">Join</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="donations.html" class="btn btn-secondary">Donate</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="join-hero text-center">
+            <div class="container">
+                <h1>Join Tulsa Area Forest School</h1>
+                <p>Ready to visit or become part of Tulsa Area Forest School? Start by completing our family intake and
+                    participation form. This helps us learn who is attending, understand any safety or support needs,
+                    and make sure every family has the information they need before joining us outdoors.</p>
+                <a href="#family-intake-form" class="btn btn-primary">Complete the Family Intake Form</a>
+            </div>
+        </section>
+
+        <section class="section text-center" style="background-color: var(--clr-bg);">
+            <div class="container">
+                <h2>How Joining Works</h2>
+                <div class="join-steps-grid">
+                    <article class="join-step-card">
+                        <h3>1. Complete the form</h3>
+                        <p>Fill out the family intake and waiver form so we can welcome you thoughtfully.</p>
+                    </article>
+                    <article class="join-step-card">
+                        <h3>2. 30-day trial</h3>
+                        <p>New families receive a 30-day trial period before dues are billed.</p>
+                    </article>
+                    <article class="join-step-card">
+                        <h3>3. Semester dues</h3>
+                        <p>After the trial period, dues are $50 per family per semester.</p>
+                    </article>
+                    <article class="join-step-card">
+                        <h3>4. Volunteer option</h3>
+                        <p>Families may offset dues through 2 approved volunteer hours per semester.</p>
+                    </article>
+                    <article class="join-step-card">
+                        <h3>5. Scholarships</h3>
+                        <p>Scholarship assistance may be available for families who need it.</p>
+                    </article>
+                    <article class="join-step-card">
+                        <h3>6. Stay and participate</h3>
+                        <p>Sessions are stay-and-participate. Parents and caregivers remain responsible for their own
+                            children.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section text-center">
+            <div class="container">
+                <h2>Before You Attend</h2>
+                <div class="join-info-panel">
+                    <p>TFS is volunteer-run. Families should RSVP when attending sessions and are responsible for their
+                        own first aid preparedness. Outdoor play includes normal risks such as uneven ground, weather,
+                        mud, insects, sticks, rocks, water, tools, knives, hooks, and other outdoor hazards.</p>
+                    <p style="margin-top: 1rem;">Families with custody, privacy, safety, allergy, medical, or
+                        accessibility concerns are encouraged to share that information in the form or contact
+                        leadership privately.</p>
+                    <p style="margin-top: 1.25rem;">TFS includes families from many different backgrounds, beliefs,
+                        education styles, and life situations. This form is not a screening tool. It helps us better
+                        support the families who are seeking us out and understand what they are looking for in forest
+                        school.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section text-center" id="family-intake-form">
+            <div class="container">
+                <h2>Family Intake and Participation Form</h2>
+                <p style="max-width: 640px; margin: 0.75rem auto 1.5rem; color: var(--clr-text-light);">Please complete
+                    this form before attending your first session or beginning your trial period.</p>
+                <!-- TODO: Replace with the final Tally intake/waiver form URL or ID -->
+                <div class="tally-embed-wrap">
+                    <iframe
+                        data-tally-src="https://tally.so/embed/xXvXdJ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                        loading="lazy" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0"
+                        title="TFS Family Intake and Participation Form"></iframe>
+                    <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+                </div>
+            </div>
+        </section>
+
+        <section class="section text-center" style="padding-top: 0;">
+            <div class="container">
+                <div class="join-secondary-contact">
+                    <h2>Have a Different Question?</h2>
+                    <p>If you are not trying to join right now and just need to ask a general question, you can still
+                        contact us here.</p>
+                    <a href="contact.html" class="btn btn-secondary">Go to General Contact Form</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer"
+        style="background: var(--clr-primary); color: white; padding: 2rem 0; margin-top: auto;">
+        <div class="container text-center">
+            <p>&copy; 2026 Tulsa Area Forest School. A 501(c)(3) Organization.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

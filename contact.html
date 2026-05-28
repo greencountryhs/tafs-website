@@ -12,12 +12,45 @@
         rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
     <style>
+        .contact-intake-banner {
+            max-width: 640px;
+            margin: 0 auto 2rem;
+            padding: 1.5rem 1.75rem;
+            background: white;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            border-top: 4px solid var(--clr-secondary);
+        }
+
+        .contact-intake-banner p {
+            margin-bottom: 1.25rem;
+            color: var(--clr-text-light);
+            line-height: 1.55;
+        }
+
+        .contact-general-section {
+            max-width: 560px;
+            margin: 0 auto;
+            padding-top: 1rem;
+        }
+
+        .contact-general-section h2 {
+            font-size: 1.35rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-general-section > p {
+            color: var(--clr-text-light);
+            margin-bottom: 1.25rem;
+            font-size: 0.98rem;
+        }
+
         .tally-embed-wrap {
-            max-width: 600px;
+            max-width: 520px;
             margin: 0 auto;
             text-align: left;
-            background: white;
-            padding: 2rem;
+            background: var(--clr-bg);
+            padding: 1.25rem 1.5rem;
             border-radius: var(--radius-md);
             box-shadow: var(--shadow-sm);
             overflow: hidden;
@@ -28,7 +61,7 @@
             max-width: 100%;
             display: block;
             border: 0;
-            min-height: min(681px, 80vh);
+            min-height: min(681px, 75vh);
         }
     </style>
 </head>
@@ -48,6 +81,7 @@
                     <li><a href="team.html" class="nav-link">Team</a></li>
                     <li><a href="reviews.html" class="nav-link">Reviews</a></li>
                     <li><a href="raffle.html" class="nav-link">Raffle</a></li>
+                    <li><a href="join.html" class="nav-link">Join</a></li>
                     <li><a href="contact.html" class="nav-link active">Contact</a></li>
                     <li><a href="donations.html" class="btn btn-secondary">Donate</a></li>
                 </ul>
@@ -64,24 +98,37 @@
         <section class="section text-center">
             <div class="container">
                 <h1>Contact Us</h1>
-                <p style="margin-bottom: 2rem;">Have questions or want to get involved? Send us a message.</p>
 
-                <div style="max-width: 600px; margin: 0 auto 2rem;">
+                <div class="contact-intake-banner">
+                    <p><strong>Most families looking to attend should start with the Family Intake Form.</strong> It
+                        helps us welcome new families, understand safety and support needs, and share what to expect
+                        before your first session.</p>
+                    <a href="join.html" class="btn btn-primary">Start the Family Intake Form</a>
+                </div>
+
+                <div style="max-width: 600px; margin: 0 auto 2.5rem;">
                     <img src="assets/images/kids-on-a-bridge.jpg" alt="Children gathering outdoors"
                         style="width: 100%; height: 300px; object-fit: cover; border-radius: var(--radius-md);">
                 </div>
 
-                <div class="tally-embed-wrap">
-                    <iframe data-tally-src="https://tally.so/embed/q4jdQd?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                        loading="lazy" width="100%" height="681" frameborder="0" marginheight="0" marginwidth="0"
-                        title="TFS Contact"></iframe>
-                    <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+                <div class="contact-general-section">
+                    <h2>General Questions</h2>
+                    <p>Not ready to join, or have a question that is not about membership? Send us a message below.</p>
+
+                    <div class="tally-embed-wrap">
+                        <iframe data-tally-src="https://tally.so/embed/q4jdQd?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                            loading="lazy" width="100%" height="681" frameborder="0" marginheight="0" marginwidth="0"
+                            title="TFS Contact"></iframe>
+                        <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+                    </div>
                 </div>
+
                 <div
                     style="max-width: 640px; margin: 1.5rem auto 0; padding: 1.1rem 1.25rem; background: var(--clr-bg); border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
                     <h2 style="margin: 0 0 0.75rem; font-size: 1.1rem; color: var(--clr-primary);">While you wait</h2>
                     <div style="display: flex; flex-wrap: wrap; gap: 0.65rem; justify-content: center;">
-                        <a href="sessions.html" class="btn btn-primary">Browse Sessions</a>
+                        <a href="join.html" class="btn btn-primary">Join TFS</a>
+                        <a href="sessions.html" class="btn btn-secondary">Browse Sessions</a>
                         <a href="faq.html" class="btn btn-secondary">Read the FAQ</a>
                     </div>
                 </div>
