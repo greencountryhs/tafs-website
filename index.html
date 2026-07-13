@@ -18,7 +18,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="styles/main.css">
     <style>
-        .home-raffle-card {
+        .home-event-card {
             max-width: 640px;
             margin: 1.25rem auto 0;
             border-radius: var(--radius-md);
@@ -30,59 +30,57 @@
             background: var(--clr-bg);
         }
 
-        .home-raffle-card__visual {
+        .home-event-card__visual {
             background: #e8ece9;
-            padding: 0.65rem 0.65rem 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
+            max-height: 280px;
+            overflow: hidden;
         }
 
-        .home-raffle-card__img {
+        .home-event-card__img {
             width: 100%;
-            height: auto;
-            object-fit: contain;
+            height: 100%;
+            min-height: 200px;
+            object-fit: cover;
             display: block;
-            border-radius: var(--radius-sm) var(--radius-sm) 0 0;
         }
 
-        .home-raffle-card__inner {
+        .home-event-card__inner {
             padding: 1.25rem 1.35rem 1.4rem;
             width: 100%;
             box-sizing: border-box;
             background: var(--clr-primary);
         }
 
-        .home-raffle-card__inner h3 {
+        .home-event-card__inner h3 {
             margin: 0 0 0.5rem;
             font-size: 1.2rem;
             line-height: 1.25;
-        }
-
-        .home-raffle-card__inner h3 a {
             color: #fff;
-            text-decoration: none;
         }
 
-        .home-raffle-card__inner h3 a:hover {
-            text-decoration: underline;
-        }
-
-        .home-raffle-card__inner p {
-            margin: 0 0 1rem;
+        .home-event-card__inner p {
+            margin: 0 0 0.85rem;
             color: rgba(255, 255, 255, 0.96);
             font-size: 0.98rem;
             line-height: 1.45;
         }
 
-        .home-raffle-card .btn.btn-primary {
+        .home-event-card__inner p:last-of-type {
+            margin-bottom: 1rem;
+        }
+
+        .home-event-card .btn.btn-primary {
             padding: 0.65rem 1.4rem;
             font-size: 1.05rem;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
         }
 
         @media (min-width: 480px) {
-            .home-raffle-card__inner {
+            .home-event-card__inner {
                 padding: 1.35rem 1.5rem 1.5rem;
             }
         }
@@ -141,20 +139,22 @@
         <section class="announcement section">
             <div class="container text-center">
                 <h2>Upcoming Events</h2>
-                <div class="home-raffle-card">
-                    <div class="home-raffle-card__visual">
-                        <img class="home-raffle-card__img"
-                            src="assets/images/tulsa-toddler-sensory-garden-play-activity-kit.webp"
-                            alt="Sensory garden play activity kit with small pots, toy flowers, and play materials"
+                <div class="home-event-card">
+                    <div class="home-event-card__visual">
+                        <img class="home-event-card__img"
+                            src="assets/images/cookin-with-kids.jpg"
+                            alt="Families cooking together outdoors at Tulsa Area Forest School"
                             width="800" height="600" loading="lazy" decoding="async">
                     </div>
-                    <div class="home-raffle-card__inner">
-                        <h3>
-                            <a href="raffle.html">May Forest School Raffle</a>
-                        </h3>
-                        <p>Buy raffle tickets for a custom forest-themed sensory play kit from Play Sensations. Winner
-                            drawn May 29 at the Tulsa Forest School potluck.</p>
-                        <a href="raffle.html" class="btn btn-primary">View Raffle Details</a>
+                    <div class="home-event-card__inner">
+                        <h3>Monthly Potluck at Chandler Park</h3>
+                        <p>July 31st, 6–9 pm. Open to the public. This is our monthly potluck gathering meant to build
+                            community and help our families connect with each other. Your family is welcome to bring a
+                            dish to share, along with any extended family or friends who want to learn more about our TFS
+                            community.</p>
+                        <p>Follow the Facebook event for updates and details.</p>
+                        <a href="https://www.facebook.com/share/1BSd9QX8KH/" class="btn btn-primary" target="_blank"
+                            rel="noopener noreferrer">View Facebook Event</a>
                     </div>
                 </div>
             </div>
